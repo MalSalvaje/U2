@@ -26,4 +26,4 @@ class Menu:
         if type(unmanejador)==manejador:
             unmanejador.restamillas(num)
     def __str__(self):
-        return '1. Ver cantidad de millas del viajero\n2.Sumar millas al viajero\n3.Canjerar millas del viajer\n4. Salir del programa.'
+        return '1. Ver cantidad de millas del viajero.\n2.Sumar millas al viajero\n3.Canjear millas del viajero.\n4.Salir del programa.'

@@ -6,3 +6,4 @@ if __name__=='__main__':
     unmanejador.leearchivo()
     #unmanejador.mostrardia(1)
     unmanejador.mostrarmin()
+    unmanejador.promedioporhora()
