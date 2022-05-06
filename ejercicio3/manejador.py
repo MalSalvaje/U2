@@ -17,7 +17,8 @@ class Manejador:
            pres=fila[5]
            unregistro=Registro(d,h,m,temp,hum,pres)
            self.agregarregistro(unregistro)   
-    def mostrardia(self,dia:int):
+    def mostrardia(self):
+        dia=int(input('Ingrese numero de dia a mostrar:'))
         for registro in self.__lista[dia-1]:
             print(registro)
     def mostrarmin(self):
@@ -48,5 +49,5 @@ class Manejador:
                 acum+=dia[i].retornatemperatura()
             prom=acum/len(self.__lista)
             hora=dia[i].retornahora()
-            print('El promedio de temperatura para la hora {} fue de {}C durante este mes'.format(hora.strftime('%M:%S'), prom))
+            print('El promedio de temperatura para la hora {} fue de {}C durante este mes.'.format(hora.strftime('%M:%S'), prom))
 
