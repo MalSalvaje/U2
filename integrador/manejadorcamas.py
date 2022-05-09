@@ -2,7 +2,7 @@ import csv
 import numpy as np
 from datetime import date as dt
 from clasecama import Cama
-from manejadormedicamentos import ManejadorMeciamentos
+from manejadormedicamentos import ManejadorMedicamentos
 
 class ManejadorCamas:
     __cantidad = 0
@@ -52,7 +52,7 @@ class ManejadorCamas:
                     hoy= hoy.strftime('%d/%m/%Y')
                     self.__camas[pos].alta(hoy)
                     print(self.__camas[pos])
-                    print(unmanejadormedicamentos.getMedicamentoPorIdCama(self.__camas.getIdCama()))
+                    print(unmanejadormedicamentos.getMedicamentoPorIdCama(self.__camas[pos].getIdCama()))
                 else:
                     print('El paciente ya se encuentra de alta')
             else:
@@ -61,5 +61,6 @@ class ManejadorCamas:
     def mostrarPacientesPorDiagnostico(self):
         diagnostico=input('Ingrese diagnostico para mostrar pacientes con diagnostico coincidente:')
         for cama in self.__camas:
-            if cama.getEstado() and cama.getDiagnostico().lower()==diagnostico.lower():
-                print('Nombre: {} Cama: {} Habitacion: {} Diagnostico: {} Fecha de Internacion: {}'.format(cama.getNombre(),cama.getIdCama(),cama.getHabitacion(),cama.getDiagnostico(),cama.getFechaInternacion()))
+            if isinstance(cama,Cama):
+                if cama.getEstado()==True and cama.getDiagnostico().lower()==diagnostico.lower():
+                    print('Nombre: {} Cama: {} Habitacion: {} Diagnostico: {} Fecha de Internacion: {}'.format(cama.getNombre(),cama.getIdCama(),cama.getHabitacion(),cama.getDiagnostico(),cama.getFechaInternacion()))

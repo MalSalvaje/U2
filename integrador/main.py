@@ -4,7 +4,7 @@ from menu import Menu
 
 if __name__=='__main__':
     unmanejadorcamas=ManejadorCamas()
-    unmanejadormedicamentos=ManejadorCamas()
+    unmanejadormedicamentos=ManejadorMedicamentos()
     unmenu=Menu()
 
     unmanejadorcamas.leerarchivo()

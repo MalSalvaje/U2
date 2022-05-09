@@ -14,7 +14,7 @@ class Medicamento:
         self.__monodroga = monodroga
         self.__presentacion = presentacion
         self.__cantidadAplicada = cantidadAplicada
-        if type(precio)==float:
+        if type(self.__precio)==float:
             self.__precio= precioTotal
     
     

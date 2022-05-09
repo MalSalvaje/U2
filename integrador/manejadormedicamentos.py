@@ -19,9 +19,9 @@ class ManejadorMedicamentos:
                 self.agregarMedicamento(unmedicamento)
             archivo.close()
 
-    def getMedicamentosPorIdCama(self, numero):
+    def getMedicamentoPorIdCama(self, numero):
         suma=0
-        c='{}'
+        cadena='{}'
         for medicamento in self.__medicamentos:
             if medicamento.getIdCama()==numero:
                 cadena+='Medicamento: {} Monodroga: {} Presentacion: {} Cantidad: {} Precio: {}'.format(medicamento.getNombreComercial(),medicamento.getMonodroga(),medicamento.getPresentacion(),medicamento.getCantidadAplicada(),medicamento.getPrecio())

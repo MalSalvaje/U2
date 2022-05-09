@@ -22,17 +22,17 @@ class Menu:
 
 
     def opcion1(self, unmanejadorcamas, unmanejadormedicamentos):
-        if isinstance(unmanejadorcamas, manejadorcamas) and isinstance(unmanejadormedicamentos, manejadormedicamentos):
+        if isinstance(unmanejadorcamas, ManejadorCamas) and isinstance(unmanejadormedicamentos, ManejadorMedicamentos):
             unmanejadorcamas.darAlta(unmanejadormedicamentos)
 
 
     def opcion2(self, unmanejadorcamas):
-        if isinstance(unmanejadorcamas, manejadorcamas):
+        if isinstance(unmanejadorcamas, ManejadorCamas):
             unmanejadorcamas.mostrarPacientesPorDiagnostico()
 
 
     def mostrarMenu(self, unmanejadorcamas, unmanejadormedicamentos):
-        if isinstance(unmanejadorcamas, manejadorcamas) and isinstance(unmanejadormedicamentos, manejadormedicamentos):
+        if isinstance(unmanejadorcamas, ManejadorCamas) and isinstance(unmanejadormedicamentos, ManejadorMedicamentos):
             opcion = '0'
             while opcion != '3':
                 print('1. Dar de alta a un paciente.')
