@@ -2,7 +2,7 @@ import csv
 import numpy as np
 from datetime import date as dt
 from clasecama import Cama
-from manejadormicamentos import ManejadorMeciamentos
+from manejadormedicamentos import ManejadorMeciamentos
 
 class ManejadorCamas:
     __cantidad = 0

@@ -26,7 +26,7 @@ class ManejadorMedicamentos:
             if medicamento.getIdCama()==numero:
                 cadena+='Medicamento: {} Monodroga: {} Presentacion: {} Cantidad: {} Precio: {}'.format(medicamento.getNombreComercial(),medicamento.getMonodroga(),medicamento.getPresentacion(),medicamento.getCantidadAplicada(),medicamento.getPrecio())
                 suma+=medicamento.getPrecio()
-        retur suma
+        return suma
 
     
 
