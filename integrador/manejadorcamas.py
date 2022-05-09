@@ -59,8 +59,8 @@ class ManejadorCamas:
                     print('No se encientra el paciente')
     
     def mostrarPacientesPorDiagnostico(self):
-        diagnostico=input('Ingrese diagnostico para mostrar pacientes con diagnostico coincidente:')
+        diagnostico=str(input('Ingrese diagnostico para mostrar pacientes con diagnostico coincidente:'))
         for cama in self.__camas:
             if isinstance(cama,Cama):
-                if cama.getEstado()==True and cama.getDiagnostico().lower()==diagnostico.lower():
+                if cama.getEstado() and cama.getDiagnostico().lower()==diagnostico.lower():
                     print('Nombre: {} Cama: {} Habitacion: {} Diagnostico: {} Fecha de Internacion: {}'.format(cama.getNombre(),cama.getIdCama(),cama.getHabitacion(),cama.getDiagnostico(),cama.getFechaInternacion()))
