@@ -5,6 +5,7 @@ class Email:
     __tipo_dominio=''
     __passw=''
     # Métodos públicos de la clase
+
     def __init__(self, id_cuenta, dominio, tipo_dominio, passw):
         self.__id_cuenta = id_cuenta
         self.__dominio = dominio
@@ -14,6 +15,7 @@ class Email:
     def retornamail(self): # self hace referencia al objeto que envía el mensaje
         mail=self.__id_cuenta+'@'+self.__dominio+'.'+self.__tipo_dominio
         print(mail)
+
     def getDominio(self):
         return self.__dominio
     
@@ -24,7 +26,9 @@ class Email:
         nuevo_dom = input("\tIndique dominio: ")
         nuevo_tipo_dom = input("\tIndique tipo de dominio: ")
         npass = input("\tEscriba Contraseña: ");
-        vernpass = input("\tVuelva a ingresar la contraseña: ")
+        vernpass = input("\tVerifique la contraseña.")
+        while npass!=vernpass:
+            vernpass = input("\tVerifique la contraseña.")
         if npass == vernpass:
             self.__id_cuenta = id_cuen
             self.__dominio = nuevo_dom
@@ -33,6 +37,7 @@ class Email:
             print("\n\tEstimadx "+nombre+", Su cuenta de mail ha sido creada: "+self.__id_cuenta+"@"+self.__dominio+'.'+self.__tipo_dominio)
         else:
             print("\n ¡Las contraseñas no coinciden!. ¡Por favor Verifique nuevamente! \n")
+
     def modificaPassword(self):
         print("\n ***** Cambio de Contraseña ***** \n")
         ver_pass = input("\tIntroduzca Contraseña anterior:")
@@ -44,6 +49,7 @@ class Email:
             vernpass=input('\tLas contraseñas no coinciden. Vuelva a confirmar contraseña:')
         self.__password = vernpass
         print('\tLa contraseña se cambió correctamente')
+
     def creardir(self, full):
             frac=full.split('@')
             if len(frac)!= 2:

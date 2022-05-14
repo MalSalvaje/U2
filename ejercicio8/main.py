@@ -21,7 +21,9 @@ if __name__=='__main__':
     print(a.getElemento(pos))
     nuevo=a-b
     print('La resta de A y B es:\n')
-    #print(nuevo)
+    nuevo.mostrar()
+    nuevo=a+b
+    print('La suma de A y B es:\n')
     nuevo.mostrar()
 
 
